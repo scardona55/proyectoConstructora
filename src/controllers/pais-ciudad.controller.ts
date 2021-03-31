@@ -61,7 +61,7 @@ export class PaisCiudadController {
           schema: getModelSchemaRef(Ciudad, {
             title: 'NewCiudadInPais',
             exclude: ['codigo'],
-            optional: ['pais_id']
+            optional: ['paisId']
           }),
         },
       },
