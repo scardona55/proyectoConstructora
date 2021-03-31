@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, belongsTo} from '@loopback/repository';
+import {Solicitud} from './solicitud.model';
 
 @model({settings: {strict: false}})
 export class RegistroPago extends Entity {
@@ -15,6 +16,8 @@ export class RegistroPago extends Entity {
   })
   aporte: number;
 
+  @belongsTo(() => Solicitud)
+  solicitudId: number;
   // Define well-known properties here
 
   // Indexer property to allow additional data
